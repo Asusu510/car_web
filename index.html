@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAzFBMVEX////rrm/lZEVsQB/vsXHrsHC0dTbytHNpPR1jMADlX0JlORnrsnFiNhdrPhxfKQDqqmZnOBBcIwBpOxbaoGW3p53kqGvu6ufqn2bplGDqpWpZHQBlNAeGVzFdMRKndEZ7TSm+iFToi1vmbUqdbEDFuLH29POUZDrZ0MvRmGD6697meFDNwblWFQB0Syvj3dlSCACOcV91TjfOkVOdhXjttXzxyKD007X34MusmIyJaFPwwZR/W0lvQy3AgkSVemyeemDuqFuCTyDbqXhqeh8YAAAJSUlEQVRoge1aYXeyuBIuDUgQARHQVkCxVdSKtbXaVmtfd/f+//90JxAQIWBt6dlz9vh8aTVxnkxmMplJcnV1wQUXXHDBfwidzfNqUdIebKyy5m8jkCTDaY2Kmju7liNpVvW8E1tFGKH5pKD9U0eA4oF9Fz7wyq6MVMlntq8kGBYM7Knq2V4aqDcQBz2kP7OaAxthV5wqSNWr5bU0pPRFjh/KzNn0dRWhNkcG5uyr5O1oCHscAULqY36yVw7qTXmO48cwsCIv+A72OuqZIJjjpz0kbbLNExjXWCTjamNk7KrjBcFyPxTMiWOs6lkH2hlIDls5fqAgrTrP3oLgiBd0UnJmHIEDDPioWfSwumQ7/vkIQOFQcJtI7ssoo/JSxSgeFw+eXVkYAYWJYP6l1o7M6KyY46r94anK1fBOJDqTtVqNSB7KKh6NLGsDsKxRAAp7ZFx/amRg/FSuysrg0ojM4gsQv8BfE0P8kiQnBPyjRuNqk+ZI5Wocu2OooUvzNQJiZYicCCeA/8m4iMJhM3Fsp4rAaUEUNrlIo1BlfoqQ53luBM8DC8O4zKhZgI4IObml/g2ACd3ItUKQ+NQ2iTF5UQxd3SShJVI4ci9wAuPnvAvqWtFM12omxwZtpitK+nHc9J915JFVZFLJLzyTtx03kw8e1n+6VVi2TsNw+8+flxeYYjYvGZn58of6NcQYB/1E50CXwGej7QFsWkSZAKwejaEHK87edr5J6+81yHZ64/ZpxuwApm4PIV36XuicfDoIKa4pns1LZmeASJr0HaUtCbYkNPjCBLOpub6MkY7PtvSmhZA8bounKYogTj1Q+sywDeZFOAxIPwDPDRWE7HMM7W9Jsjr9GS9RGpK/s5gJLz7fmRnM07OY90Tf73rVMfg2MLe+yLxJctkqmE1w7q952Aj09aqYZ8oMGYlqfGF/7kBGgczKeImHycj4QhYGRZI8qJCX7BmwTa5O8VqH3L0y8C5G9okQ1mmBgSvVlxBDMqSicuLnuEiqFCSQlG9VE7v6iSYgk90q26mg+sKV60uIzV6m/DhG0DpUX9UCMk8kFatMi6QiNNcfH83ixjVX2AgpW5nKkMmWLeHmG/R5EApaH2BTey1mJsk2KlIZiqQSC4e8IJ0pvBmVxCXMplxYvnaQWubSVDZTePP1qmRUkcpuYfkKhT0uqhMAa9rtnUX8ThvXhT8nm4XE3it2RlgkFUGg3d7KiIs8gDCjAvda6OVrqflQotRH1PZQ4tfEvT6ZMy2RM7ISrP0ihWOV/eKZpnPN2iqe9dKZBghvD+9FC7n5+vDwvi5RGOCxA7akKqfy2WazWHKzrDGEOGaeUUwgepT4dAUgZxSMs19LiurgX4TJNPL+pIl/jLaHGUaWSsNWJQAjM04KnpAy/ZUdMUXcl/Pn6AvYin/ZxKF3PWWJT4aPKgB5iJ3dGi0Hu7/NS85ftaxbr3Q8/mUTE7fOx66tgYelTs0TlMs93cPFToZ4BL7VL/uVaA5dtzykioPhcFB6VMOPs8kA+HTat4QG4GhrFfs9jHFvXMLMu9BFUTLlQEMAHIaWTfnSBYQg3NzN7u9ndzcHbp6cKQBSGzY5QxXFw9yStRJ2Sa2NBndzC+g2GgeVj6qoIFWpCbf39fo1oF6/v4l/wKEIcuwHIjcd9AGDaUwtejjscvBRoTsDIYDr+9tY67Z8dD0EBYQaSRS4WcgaoX7XONImvl3iuD5SFBmgYI9OgijTwcUqC7fXiaj6fVdIJB3OBybxbQbw3qd4E2YIssfEYzoQ8lUvckox/oKao3F3LInOnohSmzJYmBYQjdlRb9I//N7FaaFN00AHYLd5PLjQHMJtVlKkMz+QkyDSeYSNKVI42xvQSBOjNuQZwuvbUj0Q63+9CvAtOR5PETdyku6pL2AUb1HBIZ++z/HWb4TIGQmk2sdbmGuO7IQ3ulB+eFv//U9k5VAJ4S5HHJsNtih6FbeB3COcaeEmr/D1TEhWU+uwBDdzqrOuJUn6OwovzcN1KeRVoCqnkk1I5COfaeSHCd2Jafi+JmlHYTZwNKB27H0qifK3tmP0It9iSKp346VJ/XoZm7gxy/e+roc+0fzfKMjkadajirKvJCarv8I7C+bc1W8FuuCji2D/U41XQCFxXJQdYauzrk3DhJ9NfCdQ94+86wvEtELNET+yCl5S1LGWR0I8xPSdQTkxrCc2b4HGIXPpVCcp3zLOLxlrgDhX84PJC8QFJf5bU2A6182xjVMZNWOcMD9Npl6LrYPU1orZtuYarLmjsQviQeTVUEMgrjCAsB2rs58bqiap+tOG6WCsyZtF+4SZJF5QNeFpQciszxpxXZymXbV0tbWbjJCkOlqe2m8K3XzkuomDtUqd0gcj0302F3Bg0f+dl7uTVG0ZkP8soNbydf6asd1Qhcm99pZ2g5gpx3lDpvctxNecWH9nL+Mo5m/Uef6y+IOhAyUwUzf5CyfZaIXudXqkhFfIib3qTPz0h3wHIOa6R1s73RXDw5/D05mVRF4QUeZZnf4gTn3yck/ig0pKaA8ZyNHLGR+rSckmNG6iVClOlNir6TQxTd/CpOuO5ly8qaCj9ymTOWQX8QUXJLfdbpeLU8O8c53GOpbUvb27gyyTpnoi8Gaeoo2AuddPsnGBO2TVjOV0CqkDvuO0mlz5Za6CRrCzy96UUQgUROoyMI+7RHPMvGoMHB1h2Z3yOe6CUF2C/FkYDyUQxshgXX0tnskFueL1TS7DfbaRP7Ks3HSMyUX2kn0XM1pKQC3L3nhgtvmkPEkOKr+KhyNSvj3tewpGqmOw4noI3/qUdODGSg+5wwF5A0H4z53rcKajshZIXa8nk9dBeulr0qvJ3pEkkq8TdsVzx1AemWf69ZpQmoP+0EU9RSaZsS5p1unnAhNrO7clJ6wWMJYVpWc7u+fVxrKCyWLRKbS473cWk2Bkbcaup/QIJeFUdcnWVsFXB90ZbZ6leUtydCNMoFVDJ0+otFbLns+fnmBgEiTRjyGQ4Wit+dN8PrdbmgY/wVH6D7+RWvPH1Rd0zaowGW32W2TboTjDMNRU5YLUFNLfGoYOM9uaS7v9ZvST5y8wg5PAWq32291SlTS7BWoRSCmQzzAZtqY/7rbPqxUYpdgk3xmC3+mAHSdBMCJv5xKMRkEA9ofGjl8h3wUXXHDBBf8y/g/KU+fgeQx4iQAAAABJRU5ErkJggg==">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/font/fontawesome-free-5.12.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/grid.css">
+    <link rel="stylesheet" href="./asset/css/responsive.css">
+    <link rel="stylesheet" href="./asset/css/imagehover.css">
+
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            
+                <div class="navbar">
+                    <ul class="navbar-list list-network">
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">
+                                <i class=" fab fa-twitter"></i>
+                            </a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">
+                                <i class=" fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">
+                                <i class=" fab fa-instagram"></i>
+                            </a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link">
+                                <i class=" fab fa-youtube"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="navbar-list list-number">
+                        <li class="navbar-item">
+                            <a href="#" class="navbar-item-link navbar-item-link--phone ">
+                                <i class=" fas fa-phone-square-alt"></i>
+                            </a>
+                        </li>
+                        <li class="navbar-item navbar-item-number">
+                            0981558501
+                        </li>
+                       
+                    </ul>
+                </div>
+                
+                <div class="navigation">
+                    <div class="mobile">
+                        <label for="nav_mobile-input" class="nav_btn">
+                            <i class="fas fa-bars"></i>
+                        </label>
+                        <input type="checkbox" id="nav_mobile-input" hidden class="nav_input" >
+                        <label for="nav_mobile-input" class="nav_overlay">
+
+                        </label>
+
+                        <div class="nav_mobile">
+                            <ul class="nav_mobile-list">
+                                <li class="nav_mobile-item">
+                                    <a href="" class="nav_mobile-link">Trang chủ</a>
+                                </li>
+                                <li class="nav_mobile-item">
+                                    <a href="" class="nav_mobile-link">Giới thiệu</a>
+                                </li>
+                                <li class="nav_mobile-item">
+                                    <a href="" class="nav_mobile-link">Sản phẩm</a>
+                                </li>
+                                <li class="nav_mobile-item">
+                                    <a href="" class="nav_mobile-link">Tin tức</a>
+                                </li>
+                                <li class="nav_mobile-item">
+                                    <a href="" class="nav_mobile-link">liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <a href="" class="logo-wrapper">
+                            <img class="logo-img" src="https://bizweb.dktcdn.net/thumb/medium/100/364/158/themes/733133/assets/logo.png?1583296591932" alt="">
+                        </a>
+                    </div>
+                    <div class="main_nav">
+                        <ul class="main_nav-list">
+                            <li class="main_nav-item">
+                                <a href="" class="main_nav-link">
+                                    TRANG CHỦ
+                                </a>
+                            </li>
+                            <li class="main_nav-item">
+                                <a href="" class="main_nav-link">
+                                    GIỚI THIỆU
+                                </a>
+                            </li>
+                            <li class="main_nav-item main_nav-item--product">
+                                <a href="" class="main_nav-link">
+                                    SẢN PHẨM
+                                    <i class="fas fa-angle-down"></i>
+                                </a>
+
+                                <div class="product">
+                                    <ul class="product-list">
+                                        <li class="product-item product__new">
+                                            <a href="" class="product-link">Sản phẩm mới nhất
+                                                <i style="position: absolute;
+                                                top: 15px;
+                                                right: 15px;" class=" fas fa-angle-right"></i>
+                                            </a>
+
+                                            <ul class="product__new-list">
+                                                <li class="product__new-item">
+                                                    <a href="" class="product__new-link">Thiết bị thông minh</a>
+                                                </li>
+                                                <li class="product__new-item">
+                                                    <a href="" class="product__new-link">Nội thất</a>
+                                                </li>
+                                                <li class="product__new-item">
+                                                    <a href="" class="product__new-link">Đèn ô tô</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="product-item product__highlights">
+                                            <a href="" class="product-link">Sản phẩm nổi bật
+                                                <i style="position: absolute;
+                                                top: 60px;
+                                                right: 15px" class=" fas fa-angle-right"></i>
+                                            </a>
+
+                                            <ul class="product__highlights-list">
+                                                <li class="product__highlights-item">
+                                                    <a href="" class="product__highlights-link">Bình dầu</a>
+                                                </li>
+                                                <li class="product__highlights-item">
+                                                    <a href="" class="product__highlights-link">Dâu nhớt</a>
+                                                </li>
+                                                <li class="product__highlights-item">
+                                                    <a href="" class="product__highlights-link">Phụ kiện</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="product-item">
+                                            <a href="" class="product-link">Sản phẩm khuyến mại</a>
+                                        </li>
+                                        <li class="product-item">
+                                            <a href="" class="product-link">Bánh xe</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main_nav-item">
+                                <a href="" class="main_nav-link">
+                                TIN TỨC
+                                </a>
+                            </li>
+                            <li class="main_nav-item">
+                                <a href="" class="main_nav-link">
+                                    LIÊN HỆ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="shopping">
+                        <div class="shopping-icon shopping_search">
+                            <i class="shopping-icon--link fas fa-search"></i>
+
+                            <div class="div">
+                                <i style="font-size: 1.4rem; cursor: pointer; padding: 15px 2px; width: 13%;" class=" fas fa-search"></i>
+                                <input type="text" class="search" placeholder="Tìm kiếm ...">
+                            </div>
+                        </div>
+                        <div class="shopping-icon shopping_cart">
+                            <i class="shopping-icon--link fas fa-shopping-cart"></i>
+
+                            <div class="cart">
+                                <p style="margin: 0;">Không có sản phẩm nào .</p>
+                            </div>
+                        </div>
+                        <div class="shopping-icon shopping_user">
+                            <i class="shopping-icon--link fas fa-user"></i>
+                            
+                            <div class="user">
+                                <ul class="user-list">
+                                    <li class="user-item">
+                                        <a href="" class="user-link">Đăng nhập</a>
+                                    </li>
+                                    <li class="user-item">
+                                        <a href="" class="user-link">Đăng ký</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class=" grid" style="position: relative;">
+                                    
+                    <label for="filter-input" class="input-filter left">
+                        <i class="fas fa-angle-left"></i>
+                    </label>
+                    <input type="checkbox" id="filter-input" hidden class="filter-checked">
+                    <label for="filter-input" class="input-filter right">
+                        <i class="fas fa-angle-right"></i>
+                    </label>
+
+                    <div class="background">
+                    
+                        <div class="background_search">
+                            <h3 style="margin: 0;" >Tìm kiếm xe bạn thích</h3>
+                            <p>Chúng tôi cung cấp hơn 120,000 phụ tùng ô tô các loại</p>
+                            <div class="form">
+                                <input type="text" class="name_car" placeholder="Nhập tên xe">
+                                <div class="category">
+                                    <span>Chọn danh mục
+                                        <i class=" category-icon fas fa-angle-down"></i>
+                                    </span>
+                                    
+                                    <ul class="category-list">
+                                        <li class="category-item">Chọn danh mục</li>
+                                        <li class="category-item">Đèn ô tô</li>
+                                        <li class="category-item">Dầu nhớt</li>
+                                        <li class="category-item">Nội thất</li>
+                                        <li class="category-item">Động cơ</li>
+                                        <li class="category-item">Thiết bị thông minh</li>
+                                        <li class="category-item">Phụ kiện</li>
+                                        <li class="category-item">Lốp xe</li>
+                                        <li class="category-item">Sản phẩm khuyến mại</li>
+                                        <li class="category-item">Sản phẩm nổi bật</li>
+                                        <li class="category-item">Sản phẩm nới</li>
+                                        
+                                    </ul>
+                                    
+     
+     
+                                    
+                                </div>
+                                <button class="find">
+                                    <i class="fas fa-search"></i>
+                                    Tìm kiếm
+                                </button>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+                <div class="shipping">
+                    <div class="shipping__container">
+                        <div class="shipping__container-item">
+                            <span class="shipping__container-icon">
+                                <img class="shipping__container-img" src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section-image-shipping1.png?1583296591932" alt="">
+                            </span>
+                            <div class="shipping__container-text">
+                                <p>Miễn phí vận chuyển</p>
+                                <p>Với tất cả đơn hàng trên 10 triệu</p>
+                            </div>
+                        </div>
+                        <div class="shipping__container-item">
+                            <span class="shipping__container-icon">
+                                <img class="shipping__container-img" src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section-image-shipping2.png?1583296591932" alt="">
+                            </span>
+                            <div class="shipping__container-text">
+                                <p>Hoàn trả tiền</p>
+                                <p>Được đổi trả trong 7 ngày</p>
+                            </div>
+                        </div>
+                        <div class="shipping__container-item">
+                            <span class="shipping__container-icon">
+                                <img class="shipping__container-img" src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section-image-shipping3.png?1583296591932" alt="">
+                            </span>
+                            <div class="shipping__container-text">
+                                <p>Hỗ trợ trực tuyến</p>
+                                <p>Chúng tôi hỗ trợ 24/24 ngày</p>
+                            </div>
+                        </div>
+                        <div class="shipping__container-item">
+                            <span class="shipping__container-icon">
+                                <img class="shipping__container-img" src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section-image-shipping4.png?1583296591932" alt="">
+                            </span>
+                            <div class="shipping__container-text">
+                                <p>Thanh toán</p>
+                                <p>Thanh toán theo nhiều cách khác nhau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+
+        <div class="container">
+            <div class="product__category">
+
+                <div class="product__category-header">
+                    <div class="product__category-name">
+                        <i class="fas fa-bars"></i>
+                        <span>Danh mục sản phẩm</span>
+                    </div>
+
+                    <div class="product__category-filter">
+                        <label for="input-category" class="product__category-filter--btn">
+                            <i class="fas fa-angle-left"></i>
+                        </label>
+
+                        <label for="input-category" class="product__category-filter--btn">
+                            <i class="fas fa-angle-right"></i>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="product__category-container">
+                    <input type="checkbox" class="product__category--checked" hidden  id="input-category">   
+                    <div class="product__category-container--over">
+                            <div class="product__category-item wobble-vertical-on-hover">
+                                <a href="" class="product__category-link">
+                                    <img src="//bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_category_title1.jpg?1583296591932" alt="" class="img ">
+                                    <h3>lốp bánh xe</h3>
+                                </a>
+                            </div>
+    
+                            <div class="product__category-item wobble-vertical-on-hover">
+                                <a href="" class="product__category-link">
+                                    <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_category_title2.jpg?1583296591932" alt="" class="img">
+                                    <h3>lốp bánh xe</h3>
+                                </a>
+                            </div>
+    
+                            <div class="product__category-item wobble-vertical-on-hover">
+                                <a href="" class="product__category-link">
+                                    <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_category_title3.jpg?1583296591932" alt="" class="img">
+                                    <h3>lốp bánh xe</h3>
+                                </a>
+                            </div>
+    
+                            <div class="product__category-item wobble-vertical-on-hover">
+                                <a href="" class="product__category-link">
+                                    <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_category_title4.jpg?1583296591932" alt="" class="img">
+                                    <h3>lốp bánh xe</h3>
+                                </a>
+                            </div>
+    
+                            <div class="product__category-item wobble-vertical-on-hover">
+                                <a href="" class="product__category-link">
+                                    <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_category_title5.jpg?1583296591932" alt="" class="img">
+                                    <h3>lốp bánh xe</h3>
+                                </a>
+                            </div>
+    
+                            <div class="product__category-item wobble-vertical-on-hover">
+                                <a href="" class="product__category-link">
+                                    <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_category_title6.jpg?1583296591932" alt="" class="img">
+                                    <h3>lốp bánh xe</h3>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__sale">
+                <div class="product__sale-header">
+                    <div class="product__sale-name">
+                        <i class="fas fa-bars"></i>
+                        <span>Sản phẩm đang giảm giá</span>
+                    </div>
+
+                    <div class="product__sale-filter">
+                        <label for="input_sale" class="product__sale-filter--btn">
+                            <i class="fas fa-angle-left"></i>
+                        </label>
+
+                        <label for="input_sale" class="product__sale-filter--btn">
+                            <i class="fas fa-angle-right"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="product__sale-box">
+
+                    <div class="product__sale-timer">
+                        <span class="product__sale-timer--icon">
+                            <i class="fas fa-history"></i>
+                        </span>
+                        <ul class="timer-day">
+                            <li class="timer-item button">ngày</li>
+                            <li class="timer-item button">giờ</li>
+                            <li class="timer-item button">phút</li>
+                            <li class="timer-item button">giây</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product__sale-box--small">
+                        <input type="checkbox" class="product__sale-input" id="input_sale" hidden>
+                        <div class="product__sale-container">
+                        
+                            <div class="product__sale--over" style="margin-bottom: 20px;">
+                                <div class="product__sale-item pulse-grow-on-hover">
+                                    <div class="product__sale-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                 <a href="" class="product__sale-img">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077" alt="" class="img1">
+                                 </a>
+
+                                 <div class="product__sale-name">
+                                     <h3>Nhớt castrol magnatec 10w40 (4l)</h3>
+                                     <div class="product__sale-cost">
+                                         <span class="product__sale-cost--new">460.000đ</span>
+                                         <span class="product__sale-cost--old">300.000đ</span>
+                                         
+                                     </div>
+                                     <button class="product__sale-cost--btn wobble-to-bottom-right-on-hover">
+                                         mua hàng
+                                     </button>
+                                 </div>
+                                </div>
+    
+                                <div class="product__sale-item pulse-grow-on-hover">
+                                    <div class="product__sale-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                 <a href="" class = "product__sale-img">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product4.jpg?v=1569857836000" alt="" class="img1">
+                                 </a>
+
+                                 <div class="product__sale-name">
+                                     <h3>Nhớt castrol magnatec 10w40 (4l)</h3>
+                                     <div class="product__sale-cost">
+                                         <span class="product__sale-cost--new">460.000đ</span>
+                                         <span class="product__sale-cost--old">300.000đ</span>
+                                         
+                                     </div>
+                                     <button class="product__sale-cost--btn wobble-to-bottom-right-on-hover">
+                                         mua hàng
+                                     </button>
+                                 </div>
+                                </div>
+    
+                                <div class="product__sale-item pulse-grow-on-hover">
+                                    <div class="product__sale-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class = "product__sale-img">
+                                       <img src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product6.jpg?v=1569858308817" alt="" class="img1">
+                                    </a>
+
+                                    <div class="product__sale-name">
+                                        <h3>Nhớt castrol magnatec 10w40 (4l)</h3>
+                                        <div class="product__sale-cost">
+                                            <span class="product__sale-cost--new">460.000đ</span>
+                                            <span class="product__sale-cost--old">300.000đ</span>
+                                            
+                                        </div>
+                                        <button class="product__sale-cost--btn wobble-to-bottom-right-on-hover">
+                                            mua hàng
+                                        </button>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        
+                        
+                        </div>
+
+                        <div class="product__sale-container">
+                        
+                            <div class="product__sale--over" style="margin-bottom: 20px;">
+                                <div class="product__sale-item pulse-grow-on-hover">
+                                    <div class="product__sale-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                 <a href="" class="product__sale-img">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="" class="img1">
+                                 </a>
+
+                                 <div class="product__sale-name">
+                                     <h3>Nhớt castrol magnatec 10w40 (4l)</h3>
+                                     <div class="product__sale-cost">
+                                         <span class="product__sale-cost--new">460.000đ</span>
+                                         <span class="product__sale-cost--old">300.000đ</span>
+                                         
+                                     </div>
+                                     <button class="product__sale-cost--btn wobble-to-bottom-right-on-hover">
+                                         mua hàng
+                                     </button>
+                                 </div>
+                                </div>
+    
+                                <div class="product__sale-item pulse-grow-on-hover">
+                                    <div class="product__sale-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                 <a href="" class = "product__sale-img">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe2.jpg?v=1567905531910" alt="" class="img1">
+                                 </a>
+
+                                 <div class="product__sale-name">
+                                     <h3>Nhớt castrol magnatec 10w40 (4l)</h3>
+                                     <div class="product__sale-cost">
+                                         <span class="product__sale-cost--new">460.000đ</span>
+                                         <span class="product__sale-cost--old">300.000đ</span>
+                                         
+                                     </div>
+                                     <button class="product__sale-cost--btn wobble-to-bottom-right-on-hover">
+                                         mua hàng
+                                     </button>
+                                 </div>
+                                </div>
+    
+                                <div class="product__sale-item pulse-grow-on-hover">
+                                    <div class="product__sale-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class = "product__sale-img">
+                                       <img src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/product5.jpg?v=1569857958077" alt="" class="img1">
+                                    </a>
+
+                                    <div class="product__sale-name">
+                                        <h3>Nhớt castrol magnatec 10w40 (4l)</h3>
+                                        <div class="product__sale-cost">
+                                            <span class="product__sale-cost--new">460.000đ</span>
+                                            <span class="product__sale-cost--old">300.000đ</span>
+                                            
+                                        </div>
+                                        <button class="product__sale-cost--btn wobble-to-bottom-right-on-hover">
+                                            mua hàng
+                                        </button>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        
+                        
+                        </div>
+                    </div>
+    
+                    
+                </div>
+            </div>
+
+            <div class="container-background ">
+                <a class="imghvr-shutter-in" style="display: block;" href="">
+                    <img class="img2  " src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_home_banner.jpg?1583296591932" alt="">
+                    
+                </a>
+            </div>
+
+            <div class="tire">
+                <div class="tire-header">
+                    <div class="tire-name">
+                        <i class="fas fa-bars"></i>
+                        <span>lốp bánh xe</span>
+                    </div>
+
+                    <div class="tire-filter">
+                        <label for="input_tire" class="tire-filter--btn">
+                            <i class="fas fa-angle-left"></i>
+                        </label>
+    
+                        <label for="input_tire" class="tire-filter--btn">
+                            <i class="fas fa-angle-right"></i>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="tire-box">
+                    <div class="tire-background">
+                        <a href="" class=" imghvr-shutter-in">
+                            <img class="img3" src="//bizweb.dktcdn.net/100/364/158/themes/733133/assets/section_product_images1.png?1583296591932" alt="">
+                        </a>
+                    </div>
+                    <div class="tire-box--small">
+                        <input type="checkbox" class="tire-input" hidden id="input_tire" >
+                        
+                        <div class="tire-container">
+                            <div class="tire-container--over">
+                                <div class="tire-item hvr-float-shadow">
+                                    <div class="tire-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class="tire-item--img">
+                                        <img class="img4" src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="">
+                                    </a>
+                                    <div class="tire-name">
+                                        <h3>NHớt castrol magnatec 10w40 (41)</h3>
+                                        <div class="tire-cost">
+                                            <span class="tire-cost--new">460.000đ</span>
+                                            <span class="tire-cost--old">300.000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tire-item hvr-float-shadow">
+                                    <div class="tire-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class="tire-item--img">
+                                        <img class="img4" src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="">
+                                    </a>
+                                    <div class="tire-name">
+                                        <h3>NHớt castrol magnatec 10w40 (41)</h3>
+                                        <div class="tire-cost">
+                                            <span class="tire-cost--new">460.000đ</span>
+                                            <span class="tire-cost--old">300.000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tire-item hvr-float-shadow">
+                                    <div class="tire-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class="tire-item--img">
+                                        <img class="img4" src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="">
+                                    </a>
+                                    <div class="tire-name">
+                                        <h3>NHớt castrol magnatec 10w40 (41)</h3>
+                                        <div class="tire-cost">
+                                            <span class="tire-cost--new">460.000đ</span>
+                                            <span class="tire-cost--old">300.000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tire-item hvr-float-shadow">
+                                    <div class="tire-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class="tire-item--img">
+                                        <img class="img4" src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="">
+                                    </a>
+                                    <div class="tire-name">
+                                        <h3>NHớt castrol magnatec 10w40 (41)</h3>
+                                        <div class="tire-cost">
+                                            <span class="tire-cost--new">460.000đ</span>
+                                            <span class="tire-cost--old">300.000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tire-item hvr-float-shadow">
+                                    <div class="tire-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class="tire-item--img">
+                                        <img class="img4" src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="">
+                                    </a>
+                                    <div class="tire-name">
+                                        <h3>NHớt castrol magnatec 10w40 (41)</h3>
+                                        <div class="tire-cost">
+                                            <span class="tire-cost--new">460.000đ</span>
+                                            <span class="tire-cost--old">300.000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tire-item hvr-float-shadow">
+                                    <div class="tire-sale-off">
+                                        <span>30%</span>
+                                    </div>
+                                    <a href="" class="tire-item--img">
+                                        <img class="img4" src="https://bizweb.dktcdn.net/thumb/large/100/364/158/products/lopxe3.jpg?v=1567905623000" alt="">
+                                    </a>
+                                    <div class="tire-name">
+                                        <h3>NHớt castrol magnatec 10w40 (41)</h3>
+                                        <div class="tire-cost">
+                                            <span class="tire-cost--new">460.000đ</span>
+                                            <span class="tire-cost--old">300.000đ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news">
+                <div class="news-header">
+                    
+                        <span>tin tức</span>
+                
+                </div>
+                <div class="news-box">
+                    <div class="news-box--container">
+                        <div class="news-box--item">
+                            <a href="" class="">
+                                <img class="news-box--img" src="https://bizweb.dktcdn.net/100/364/158/articles/blog3.jpg?v=1567948212317" alt="">
+                            </a>
+                            <span>12/12/2012</span>
+                            <a href="" class="news-box--link">
+                                <h3>nissan navara 2012 them ban moi gia 675 trieu</h3>
+                            </a>
+                        </div>
+                        <div class="news-box--item">
+                            <a href="" class="">
+                                <img class="news-box--img" src="https://bizweb.dktcdn.net/100/364/158/articles/blog2.jpg?v=1567948064763" alt="">
+                            </a>
+                            <span>12/12/2012</span>
+                            <a href="" class="news-box--link">
+                                <h3>nissan navara 2012 them ban moi gia 675 trieu</h3>
+                            </a>
+                        </div>
+                        <div class="news-box--item">
+                            <a href="" class="">
+                                <img class="news-box--img" src="https://bizweb.dktcdn.net/100/364/158/articles/blog1.jpg?v=1567947942797" alt="">
+                            </a>
+                            <span>12/12/2012</span>
+                            <a href="" class="news-box--link">
+                                <h3>nissan navara 2012 them ban moi gia 675 trieu</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trademark">
+                <div class="trademark-header">
+                    <i class="fas fa-bars"></i>
+                    <span>top thương hiệu</span>
+                </div>
+                <div class="trademark-box">
+                    <div class="trademark-box--container">
+                        
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand1.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand2.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand3.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand4.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand5.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand6.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+
+                            <a href="" class="trademark-box--link">
+                                <img src="https://bizweb.dktcdn.net/100/364/158/themes/733133/assets/brand7.png?1583296591932" alt="" class="trademark-box--img">
+                            </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="footer">
+            <div class="contact" style="background-image: url(//bizweb.dktcdn.net/100/364/158/themes/733133/assets/bg-ft-top.jpg?1583296591932);">
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <ul class="contact-icon--list">
+                            <li class="contact-icon--item">
+                                <a class="contact-icon--link hvr-rectangle-out" href="">
+                                    <i class=" fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="contact-icon--item">
+                                <a class="contact-icon--link hvr-rectangle-out" href="">
+                                    <i class="  fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="contact-icon--item">
+                                <a class="contact-icon--link hvr-rectangle-out" href="">
+                                    <i class="  fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="contact-icon--item">
+                                <a class="contact-icon--link hvr-rectangle-out" href="">
+                                    <i class="  fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-mail">
+                        <h3>đăng ký nhận tin</h3>
+                        <input type="text" class="mail-input" placeholder="Email của bạn">
+                        <button class="mail-button">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-container--address">
+                    <a href="">
+                        <img class="footer-img" src="https://bizweb.dktcdn.net/thumb/medium/100/364/158/themes/733133/assets/logo.png?1583296591932" alt="">
+                    </a>
+
+                    <ul class="address-list">
+                        <li class="address-item">
+                            <i class="address-icon fas fa-map-marker-alt"></i>
+                            Địa chỉ : 361 Vũ Tông Phan
+                        </li>
+                        <li class="address-item">
+                            <i class="address-icon fas fa-tty"></i>
+                            Điện thoại :0981558501
+                        </li>
+                        <li class="address-item">
+                            <i class="address-icon fas fa-envelope"></i>
+                            Email : waitdou2212@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-container--address">
+                    <a href="">
+                        <img class="footer-img" src="https://bizweb.dktcdn.net/thumb/medium/100/364/158/themes/733133/assets/logo.png?1583296591932" alt="">
+                    </a>
+
+                    <ul class="address-list">
+                        <li class="address-item">
+                            <i class="address-icon fas fa-map-marker-alt"></i>
+                            Địa chỉ : 361 Vũ Tông Phan
+                        </li>
+                        <li class="address-item">
+                            <i class="address-icon fas fa-tty"></i>
+                            Điện thoại :0981558501
+                        </li>
+                        <li class="address-item">
+                            <i class="address-icon fas fa-envelope"></i>
+                            Email : waitdou2212@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-container--address">
+                    <a href="">
+                        <img class="footer-img" src="https://bizweb.dktcdn.net/thumb/medium/100/364/158/themes/733133/assets/logo.png?1583296591932" alt="">
+                    </a>
+
+                    <ul class="address-list">
+                        <li class="address-item">
+                            <i class="address-icon fas fa-map-marker-alt"></i>
+                            Địa chỉ : 361 Vũ Tông Phan
+                        </li>
+                        <li class="address-item">
+                            <i class="address-icon fas fa-tty"></i>
+                            Điện thoại :0981558501
+                        </li>
+                        <li class="address-item">
+                            <i class="address-icon fas fa-envelope"></i>
+                            Email : waitdou2212@gmail.com
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <h3>Bản quyền thuộc vể @Asusu</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

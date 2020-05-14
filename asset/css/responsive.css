@@ -1,0 +1,34 @@
+/*  Tablet */
+@media (min-width : 740px) and ( max-width : 1023px) {
+    
+
+}
+
+/* Tablet and Mobile*/
+@media (max-width : 1023px) {
+    .main_nav {
+        display: none;
+    }
+    .navigation {
+        /* justify-content: space-between; */
+    }
+
+    .shopping {
+        padding-left: 210px;
+    }
+
+    .logo {
+        padding-left: 50px;
+    }
+}
+/* Mobile */
+@media (max-width : 739px) {
+
+    .list-network {
+        display: none;
+    }
+
+    .navbar-list {
+        margin: 5px 10px;
+    }
+}
